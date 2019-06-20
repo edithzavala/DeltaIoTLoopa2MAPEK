@@ -1,0 +1,11 @@
+version: '2'
+
+services:
+    mapekl2:
+        image: mapekl2
+        ports:
+            - "8095:8080"
+        volumes:
+            - ./config:/tmp/config
+        network_mode: host
+        command: "application.json --server.port=8095"    

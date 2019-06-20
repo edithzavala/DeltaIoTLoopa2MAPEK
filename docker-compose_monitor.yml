@@ -1,0 +1,11 @@
+version: '2'
+
+services:
+    monitorn:
+        image: iotmonitorl1mn
+        ports:
+            - "8097:8080"
+        volumes:
+            - ./config:/tmp/config
+        network_mode: host
+        command: "monitorn applicationmn.json ok --server.port=8097"

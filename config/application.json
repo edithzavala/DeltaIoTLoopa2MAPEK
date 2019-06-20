@@ -1,0 +1,45 @@
+{
+  "autonomicManagerId" : "deltaIoTAM",
+  "elementsId":{
+    "monitorId" : "iotmonitorl2",
+    "analyzerId" : "iotanalyzerl2",
+    "plannerId" : "iotplannerl2",
+    "executerId" : "iotexecuterl2",
+    "kbId" : "iotkbl2"
+  },
+  "elementsMessagesCodes": {
+    "MSSGINFL": "1",
+    "MSSGINAL": "2",
+    "MSSGADAPT": "3",
+    "MSSGOUTFL": "4",
+    "MSSGOUTAL" : "5"
+  },
+  "elementsMessageBodyTypes":{
+    "iotmonitorl2" : "MONITOR",
+    "iotanalyzerl2" : "ANALYZE",
+    "iotplannerl2" : "PLAN",
+    "iotexecuterl2" : "EXECUTE",
+    "iotkbl2" : "KB"
+  },
+  "recipients":[{
+    "id":"iotmonitorl1m1",
+    "typeOfData":["STATUS","ADAPT"],
+    "recipient": "http://localhost:8091/"
+    },{
+    "id":"iotmonitorl1m2",
+    "typeOfData":["STATUS","ADAPT"],
+    "recipient": "http://localhost:8096/"
+    }],
+  "monFreq":4000,
+  "monitorsl1":[{
+    "id":"iotmonitorl1m1",
+    "monFreq":2000,
+    "motes":[2,3,4,5,6,7,8],
+    "minSymptoms":3
+    },{
+    "id":"iotmonitorl1m2",
+    "monFreq":2000,
+    "motes":[9,10,11,12,13,14,15],
+    "minSymptoms":3
+    }]
+}
